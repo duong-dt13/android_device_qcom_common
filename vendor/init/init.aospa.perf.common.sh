@@ -138,12 +138,6 @@ echo "0-2" > /dev/cpuset/system-background/cpus
 echo "0-2" > /dev/cpuset/restricted/cpus
 echo "0-1,3-6" > /dev/cpuset/foreground/cpus
 
-### IRQ Tuning ###
-
-# Place drm & kgsl irqs on different cores
-echo "1" > /proc/irq/243/smp_affinity_list 
-echo "2" > /proc/irq/43/smp_affinity_list
-
 ### Disable debugging & logging ##
 
 # Disable sched stats.
